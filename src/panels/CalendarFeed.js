@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Panel, PanelHeader, PanelHeaderBack, SplitLayout } from '@vkontakte/vkui';
-import { ScrollMenu,} from 'react-horizontal-scrolling-menu';
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 
 import Day from './Day';
 import './Style.css';
@@ -15,9 +15,13 @@ function onWheel(apiObj, ev) {
   }
 
   if (ev.deltaY < 0) {
-    apiObj.scrollNext();
+    console.log(apiObj.getNextItem());
+    apiObj.scrollToItem(apiObj.getNextItem(), "auto", "end");
+    console.log(apiObj.getNextItem());
   } else if (ev.deltaY > 0) {
-    apiObj.scrollPrev();
+    console.log(apiObj.getPrevItem());
+    apiObj.scrollToItem(apiObj.getPrevItem(), "auto", "start");
+    console.log(apiObj.getPrevItem());
   }
 }
 

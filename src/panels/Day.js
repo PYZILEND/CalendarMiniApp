@@ -9,7 +9,7 @@ const Day = props =>(
     <SplitCol className="DayPanel">
         <div>
             <div className="DayTitlePanel">
-                <p className="DayTitle">{props.day.weekDayName}</p>
+                <p className="DayTitle">{props.day.weekDayName} <br/> ({props.day.date.substring(8)}{props.day.date.substring(4,7)})</p>
             </div>  
             {
                 props.day.events.length > 0 ?   
