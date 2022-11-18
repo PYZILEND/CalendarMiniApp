@@ -31,7 +31,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-horizontal-scrolling-menu": "^3.2.0"
+    "react-horizontal-scrolling-menu": "^3.2.0",
+    "restore": "^0.3.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
