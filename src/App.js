@@ -9,6 +9,7 @@ import CalendarFeed from './panels/CalendarFeed';
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
 	const [fetchedEvents, setEvents] = useState(null);
+	const [width, setWindowWidth] = useState(0);
 
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {
@@ -22,7 +23,25 @@ const App = () => {
 			setEvents({days :events});
 		}
 		fetchData();
+
+		updateDimensions();
+
+		window.addEventListener("resize", updateDimensions);
+		return () => 
+		window.removeEventListener("resize",updateDimensions);
 	}, []);
+
+	const updateDimensions = () => {
+		const width = window.innerWidth
+		setWindowWidth(width)
+	  }
+
+	  const displayDesktop= {
+		display: width > 768 ? 'block' : 'none'
+	  }
+	  const displayMobile = {
+		display: width > 768 ? 'none' : 'block',
+	  }
 
 	const preventDefault = (ev) => {
 		if (ev.preventDefault) {
@@ -62,7 +81,7 @@ const App = () => {
 		<ConfigProvider scheme={scheme}>
 			<AdaptivityProvider>
 				<AppRoot>		
-					<CalendarFeed id='calendarFeed' calendar={fetchedEvents} disableScroll={disableScroll} enableScroll={enableScroll}/>							
+					<CalendarFeed id='calendarFeed' calendar={fetchedEvents} disableScroll={disableScroll} enableScroll={enableScroll} displayDesktop={displayDesktop} displayMobile={displayMobile}/>							
 				</AppRoot>
 			</AdaptivityProvider>
 		</ConfigProvider>

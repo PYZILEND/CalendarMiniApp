@@ -2,13 +2,26 @@ body {
     overflow-y: hidden;
 }
 
+.vkuiAppRoot{
+    overflow: auto;
+}
+
 .react-horizontal-scrolling-menu--scroll-container{
     padding: 0 5px;
     max-height: 480px;
 }
 
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
 .MainPanel{
-    background-size: cover;
+    background: top;
     background-image: url("../img/background.png");    
 }
 
@@ -26,27 +39,39 @@ p
     letter-spacing: 0.10em;
     margin-block-start: 0;
     margin-block-end: 0;
+    word-break: break-word;
 }
 
 .DayPanel{
     margin: 10px 6px;
     height: 100%;
-    width: 145px;
+    width: 154px;
+}
+
+@media only screen and (max-width: 768px){
+    .DayPanel{
+        margin: 10px 1%;
+        height: 100%;
+        width: 48%;
+        display: inline-grid;
+    }
 }
 
 .DayTitlePanel{
-    background-color: #FF004E;
+    background-color: #FFFFFF;
     height: auto;
     margin: auto;
     text-align: center;
     padding: 0.5em 0.2em;
     border-radius: 5px;
+    border: solid 0.5em #00BCE2
 }
 
 .DayTitle{
     margin-bottom: 0.2em;
     text-align: center;
     font-size: 1.3em;
+    color: black;
 }
 
 .GamePanel{   
@@ -112,6 +137,7 @@ p
     text-align: center;
     line-height: 1em;
     width: 100%;    
+    margin-bottom: 10px;
 }
 
 .IconPanel{

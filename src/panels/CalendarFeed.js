@@ -25,13 +25,22 @@ function onWheel(apiObj, ev) {
   }
 }
 
+
+
 const CalendarFeed = props =>(
-  <div className="MainPanel" onMouseEnter={props.disableScroll} onMouseLeave={props.enableScroll}>
-    <ScrollMenu onWheel={onWheel}>
-        {props.calendar && props.calendar.days.map((day) => (
-          <Day key={day.date} day={day} />
-        ))}  
-    </ScrollMenu> 
+  <div className="MainPanel">    
+    <div style={props.displayDesktop} onMouseEnter={props.disableScroll} onMouseLeave={props.enableScroll}>
+      <ScrollMenu style={{overflow: 'hidden'}} onWheel={onWheel}>
+            {props.calendar && props.calendar.days.map((day) => (
+              <Day key={day.date} day={day} />
+            ))}  
+        </ScrollMenu> 
+    </div>
+    <div style={props.displayMobile}>
+      {props.calendar && props.calendar.days.map((day) => (
+            <Day key={day.date} day={day} />
+      ))}  
+    </div>
   </div>
 );
 
