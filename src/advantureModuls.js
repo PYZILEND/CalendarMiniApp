@@ -325,6 +325,17 @@ export function allSystems() {
           "color": "#d54127",
           "iconPath": "vtm.png",
           "id": 16
+        },
+        {
+          "name": "Pathfinder",
+          "keyWords": [
+            "Pathfinder",
+            "патфайндер",
+            "пасфаиндер"
+          ],
+          "color": "#0fa041",
+          "iconPath": "pathfinder.png",
+          "id": 17
         }
       ]
     return ret;
