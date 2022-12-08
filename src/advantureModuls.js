@@ -336,6 +336,18 @@ export function allSystems() {
           "color": "#0fa041",
           "iconPath": "pathfinder.png",
           "id": 17
+        },
+        {
+          "name": "Cogent",
+          "keyWords": [
+            "Cogent",
+            "cogent",
+            "Когент",
+            "когент"
+          ],
+          "color": "#4f5bc4",
+          "iconPath": "cogent.png",
+          "id": 18
         }
       ]
     return ret;
