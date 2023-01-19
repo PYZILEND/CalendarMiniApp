@@ -348,6 +348,26 @@ export function allSystems() {
           "color": "#4f5bc4",
           "iconPath": "cogent.png",
           "id": 18
+        },
+        {
+          "name": "ForbiddenLands",
+          "keyWords": [
+            "Запретные земли",
+            "запретные земли"
+          ],
+          "color": "#4f5bc4",
+          "iconPath": "forbiddenLands.png",
+          "id": 19
+        },
+        {
+          "name": "MysteriesOfEchosphere",
+          "keyWords": [
+            "Тайны эхосферы",
+            "тайны эхосферы"
+          ],
+          "color": "#4f5bc4",
+          "iconPath": "mysteriesOfEchosphere.png",
+          "id": 20
         }
       ]
     return ret;
