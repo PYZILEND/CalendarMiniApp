@@ -368,6 +368,19 @@ export function allSystems() {
           "color": "#4f5bc4",
           "iconPath": "mysteriesOfEchosphere.png",
           "id": 20
+        },
+        {
+          "name": "TheaterOfRanok",
+          "keyWords": [
+            "Театр Ранока",
+            "Театр ранока",
+            "театр ранока",
+            "Theater of Ranok",
+            "theater of ranok"
+          ],
+          "color": "#ff0329",
+          "iconPath": "theaterOfRanok.png",
+          "id": 21
         }
       ]
     return ret;
