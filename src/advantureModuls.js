@@ -234,7 +234,7 @@ export function allSystems() {
             "Дельта Грин"
           ],
           "color": "#3bc609",
-          "iconPath": "cthulhu.png",
+          "iconPath": "deltaGreen.png",
           "id": 7
         },
         {
@@ -380,6 +380,16 @@ export function allSystems() {
           ],
           "color": "#ff0329",
           "iconPath": "theaterOfRanok.png",
+          "id": 21
+        },
+        {
+          "name": "Igroteka",
+          "keyWords": [
+            "Игротека",
+            "игротека",
+          ],
+          "color": "#4f5bc4",
+          "iconPath": "igroteka.png",
           "id": 21
         }
       ]
