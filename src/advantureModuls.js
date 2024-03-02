@@ -366,7 +366,7 @@ export function allSystems() {
             "тайны эхосферы"
           ],
           "color": "#4f5bc4",
-          "iconPath": "mysteriesOfEchosphere.png",
+          "iconPath": "misteriesOfEchosphere.png",
           "id": 20
         },
         {
@@ -390,7 +390,19 @@ export function allSystems() {
           ],
           "color": "#4f5bc4",
           "iconPath": "igroteka.png",
-          "id": 21
+          "id": 22
+        },
+        {
+          "name": "Witcher",
+          "keyWords": [
+            "Ведьмак",
+            "ведьмак",
+            "Witcher",
+            "witcher",
+          ],
+          "color": "#3f3b52",
+          "iconPath": "witcher.png",
+          "id": 23
         }
       ]
     return ret;
