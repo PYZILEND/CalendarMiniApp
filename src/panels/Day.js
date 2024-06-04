@@ -13,7 +13,7 @@ const Day = props =>(
             </div>  
             {
                 props.day.events.length > 0 ?   
-                props.day.events.map(event => ( <Game halfPanel={props.day.events.length > 2} key={event.order} event={event}/> )):    
+                props.day.events.map(event => ( <Game halfPanel={props.day.events.length > 3} key={event.order} event={event}/> )):    
                 <NoGame />
             }
         </div>

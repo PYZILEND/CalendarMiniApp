@@ -8,7 +8,7 @@ body {
 
 .react-horizontal-scrolling-menu--scroll-container{
     padding: 0 5px;
-    max-height: 480px;
+    max-height: 960px;
 }
 
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
